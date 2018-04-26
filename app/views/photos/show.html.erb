@@ -1,0 +1,14 @@
+<div class="show-page">
+
+  <div class="table-responsive">
+    <table>
+      <tr><td><h2><%= @photo.title %></h2></td></tr>
+      <tr><td><p><%= @photo.date %></p></td></tr>
+      <tr><td><%= image_tag @photo.file_location.url, size: "600x400", class: "img-thumbnail" %></td></tr>
+    <tr><td><p><%= simple_format(@photo.description) %></p></td></tr>
+    </table>
+  </div>
+
+  <%= link_to 'Back to Index', photos_path %>
+
+</div>
